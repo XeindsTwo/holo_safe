@@ -1,0 +1,69 @@
+.modal {
+  @include topLeft50;
+  position: fixed;
+  max-width: 460px;
+  max-height: 90vh;
+  width: 96%;
+  padding: 40px 24px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 50;
+  border-radius: 16px;
+  background: #131c2c;
+  box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+  transform: translate(-50%, -25%);
+  transition: transform .45s ease-in-out, visibility .4s, opacity .4s;
+  @media (max-width: 800px) {
+    padding-top: 30px;
+  }
+  @media (max-width: 560px) {
+    max-width: 410px;
+  }
+  @media (max-width: 415px) {
+    width: 95%;
+    padding: 35px 20px 26px;
+  }
+  @media (max-height: 680px) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.active {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__title {
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 28px;
+    color: $white;
+    margin-bottom: 24px;
+    @media (max-width: 610px) {
+      font-size: 26px;
+    }
+    @include r($phone) {
+      font-size: 24px;
+    }
+  }
+
+  &__subtext {
+    color: rgba($white, .6);
+    font-size: 16px;
+    margin-bottom: 32px;
+    @media (max-width: 520px) {
+      font-size: 15px;
+    }
+  }
+
+  &__btn {
+    @media (max-width: 520px) {
+      font-size: 15px;
+    }
+  }
+}

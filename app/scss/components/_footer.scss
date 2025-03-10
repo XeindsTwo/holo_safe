@@ -1,0 +1,59 @@
+.footer {
+  background-color: #F7F7F7;
+  padding: 45px 0 35px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    @include flex-column(65);
+    max-width: max-content;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  &__text {
+    opacity: .6;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 120px;
+  }
+
+  &__column {
+    @include flex-column(20);
+
+    &-name {
+      font-weight: 600;
+      line-height: 1;
+      font-size: 20px;
+      color: #1b3877;
+    }
+  }
+
+  &__list {
+    @include flex-column(16);
+  }
+
+  &__link {
+    font-size: 17px;
+    max-width: max-content;
+    border-radius: 4px;
+    padding: 1px 1px;
+    border: 2px solid transparent;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: #007aff;
+    }
+
+    &:focus {
+      color: #1b3877;
+      border-color: #007aff;
+    }
+  }
+}

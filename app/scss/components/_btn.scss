@@ -1,0 +1,60 @@
+.btn {
+  @include flex-align-center(16);
+  justify-content: center;
+  padding: 16px 42px;
+  background-color: $accent;
+  font-weight: 500;
+  color: $white;
+  font-size: 18px;
+  border-radius: 50px;
+  max-width: max-content;
+  border: 2px solid transparent;
+  transition: color .4s, background-color .4s, border .4s;
+  @include r($lg) {
+    padding: 13px 35px;
+  }
+  @include r($tablet) {
+    padding: 13px 30px;
+  }
+  @include r($phone) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: #1b3877;
+    border-color: transparent;
+    color: #f2f2f5;
+  }
+
+  &:focus {
+    background-color: transparent;
+    color: #1b3877;
+    border-color: #1b3877;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: #0D1B39;
+    border-color: #0D1B39;
+
+    &:hover {
+      background-color: #1b3877;
+      border-color: transparent;
+      color: #f2f2f5;
+
+      svg path {
+        fill: $white;
+      }
+    }
+
+    &:focus {
+      background-color: #333d49;
+      color: $white;
+      border-color: transparent;
+
+      svg path {
+        fill: $white
+      }
+    }
+  }
+}

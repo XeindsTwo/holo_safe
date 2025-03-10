@@ -1,0 +1,37 @@
+.input {
+  padding: 20px 20px;
+  border-radius: 16px;
+  width: 100%;
+  font-size: 16px;
+  color: $black100;
+  border: 1px solid transparent;
+  background-color: #eaf3ff;
+  transition: border .4s, color .4s;
+
+  &:hover {
+    border-color: $accent;
+  }
+
+  &:focus {
+    border-color: $accent;
+
+    &::placeholder {
+      color: $black100;
+    }
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: inset 0 0 0 50px #171C25;
+    -webkit-text-fill-color: $white;
+  }
+
+  &:-webkit-autofill:hover {
+    -webkit-text-fill-color: $white;
+  }
+
+  &::placeholder {
+    transition: color .4s;
+    color: #625f5f;
+  }
+}

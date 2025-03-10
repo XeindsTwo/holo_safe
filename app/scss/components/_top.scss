@@ -1,0 +1,13 @@
+.top {
+  @include flex-column(24);
+  text-align: center;
+  max-width: 490px;
+  width: 100%;
+  margin: 0 auto 60px;
+
+  &__text {
+    font-size: 20px;
+    max-width: 465px;
+    font-weight: 500;
+  }
+}
