@@ -2,6 +2,12 @@
   @include bg;
   padding: 75px 0;
   background-image: url("../images/stats.svg");
+  @include r($lg) {
+    padding: 60px 0;
+  }
+  @include r($phone) {
+    padding: 50px 0;
+  }
 
   &__list {
     display: grid;
@@ -9,6 +15,14 @@
     text-align: center;
     grid-gap: 70px;
     grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 1300px) {
+      grid-gap: 50px;
+    }
+    @media (max-width: 860px) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 560px;
+      margin: 0 auto;
+    }
   }
 
   &__num {
@@ -17,10 +31,33 @@
     margin-bottom: 24px;
     display: block;
     line-height: 85%;
+    @media (max-width: 1140px) {
+      font-size: 54px;
+    }
+    @include r($lg) {
+      font-size: 48px;
+    }
+    @include r($sm) {
+      font-size: 42px;
+    }
+    @media (max-width: 420px) {
+      font-size: 38px;
+    }
   }
 
   &__text {
     font-size: 24px;
     font-weight: 500;
+    @include r($lg) {
+      font-size: 22px;
+    }
+    @include r($sm) {
+      font-size: 20px;
+    }
+    @media (max-width: 420px) {
+      font-size: 19px;
+      max-width: 130px;
+      margin: 0 auto;
+    }
   }
 }

@@ -12,12 +12,21 @@
       display: none;
       @media (max-width: 860px) {
         display: flex;
-        height: 7px;
+        height: 3px;
         overflow: hidden;
         border-radius: 30px;
-        background-color: rgba(#691923, .8);
+        background-color: rgba(#000, .2);
         margin-bottom: 40px;
       }
+    }
+  }
+
+  &__title {
+    @media (max-width: 1100px) {
+      max-width: 440px;
+    }
+    @include r($sm) {
+      max-width: 390px;
     }
   }
 
@@ -55,7 +64,7 @@
       font-size: 19px;
     }
     @include r($phone) {
-      font-size: 18px;
+      font-size: 17px;
     }
   }
 
@@ -100,13 +109,16 @@
     max-width: 300px;
     width: 100%;
     @include r($lg) {
-      max-width: 245px;
+      max-width: 280px;
+    }
+    @media (max-width: 385px) {
+      max-width: 270px;
     }
   }
 
   .swiper-scrollbar-drag {
     @media (max-width: 860px) {
-      background-color: #f82b45;
+      background-color: #6c6c6c;
     }
   }
 }

@@ -11,4 +11,7 @@
   max-width: max-content;
   border: 2px solid transparent;
   transition: color .4s, background-color .4s, border .4s;
+  @include r($sm) {
+    font-size: 16px;
+  }
 }

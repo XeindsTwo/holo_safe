@@ -13,10 +13,28 @@
 
   &__inner {
     @include flex-between-center-gap(30);
+    @include r($lg) {
+      gap: 54px;
+      flex-direction: column;
+    }
+
+    img {
+      @include r($lg) {
+        width: 168px;
+        height: auto;
+      }
+    }
   }
 
   &__list {
     @include flex-align-center(23);
+    justify-content: center;
+    gap: 18px 23px;
+    flex-wrap: wrap;
+    @media (max-width: 545px) {
+      max-width: 380px;
+      gap: 20px 26px;
+    }
   }
 
   &__link {
@@ -28,6 +46,9 @@
     border: 1px solid transparent;
     border-radius: 4px;
     transition: color .4s, border .4s;
+    @media (max-width: 1200px) {
+      font-size: 18px;
+    }
 
     &:hover {
       color: $white;
@@ -59,9 +80,22 @@
     }
   }
 
+  &__btn {
+    @include r($lg) {
+      font-size: 16px;
+      padding: 14px 22px;
+    }
+  }
+
   &__copy {
     text-align: center;
     font-size: 18px;
     color: rgba($white, .4);
+    @include r($desktop) {
+      font-size: 16px;
+    }
+    @include r($phone) {
+      font-size: 15px;
+    }
   }
 }

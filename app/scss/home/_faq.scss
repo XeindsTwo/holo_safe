@@ -18,7 +18,7 @@
   }
 
   &__list {
-    @include flex-column(12);
+    @include flex-column(24);
     max-width: 680px;
     margin: 0 auto;
   }
@@ -27,12 +27,6 @@
     position: relative;
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(#100F0F, .15);
-    @include r($sm) {
-      padding: 24px 20px;
-    }
-    @include r($phone) {
-      padding: 22px 17px;
-    }
   }
 
   &__body {
@@ -73,16 +67,11 @@
     background-color: $white;
     border: 1px solid transparent;
     border-radius: 50%;
+    flex: 0 0 auto;
     transition: color .4s, border .4s, transform .4s, background-color .4s;
-    @include r($sm) {
-      right: 20px;
-    }
     @media (max-width: 540px) {
       width: 29px;
       height: 29px;
-    }
-    @include r($phone) {
-      right: 17px;
     }
 
     &::after, &::before {
@@ -138,11 +127,12 @@
     margin-right: 60px;
     transition: color .4s;
     cursor: pointer;
-    @include r($sm) {
-      font-size: 18px;
+    @include r($tablet) {
+      font-size: 22px;
+      margin-right: 25px;
     }
     @include r($phone) {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 
@@ -162,9 +152,6 @@
     }
     @media (max-width: 540px) {
       padding-right: 40px;
-    }
-    @include r($phone) {
-      font-size: 14px;
     }
   }
 }
