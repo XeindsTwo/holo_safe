@@ -5,9 +5,18 @@
   width: 100%;
   margin: 0 auto 60px;
 
+  &.long {
+    max-width: 530px;
+  }
+
   &__text {
     font-size: 20px;
     max-width: 465px;
     font-weight: 500;
+    margin: 0 auto;
+
+    &.short {
+      max-width: 435px;
+    }
   }
 }

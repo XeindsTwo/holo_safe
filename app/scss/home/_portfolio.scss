@@ -1,0 +1,12 @@
+.portfolio {
+  &__list {
+    display: grid;
+    gap: 10px 24px;
+    grid-template-columns: repeat(4, 1fr);
+
+    li {
+      @include flex-center;
+      min-height: 110px;
+    }
+  }
+}

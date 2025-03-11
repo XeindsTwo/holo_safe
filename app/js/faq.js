@@ -22,13 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const faqBody = faqItem.querySelector('.faq__body');
       const faqBtn = faqItem.querySelector('.faq__btn');
 
-      faqBodies.forEach((body, index) => {
-        const otherButton = faqButtons[index];
-
+      faqBodies.forEach((body) => {
+        const btn = body.closest('.faq__item').querySelector('.faq__btn');
         if (body !== faqBody) {
           body.style.maxHeight = '0px';
           body.classList.remove('faq__body--active');
-          otherButton.classList.remove('active');
+          btn.classList.remove('active');
           updateTabIndexes(body, true);
         }
       });

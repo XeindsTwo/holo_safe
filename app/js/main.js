@@ -19,32 +19,12 @@ menuLinks.forEach((menuLink) => {
   menuLink.addEventListener('click', scrollToSection);
 });
 
-new Swiper('.services__swiper', {
-  navigation: {
-    nextEl: '.services__btn--next',
-    prevEl: '.services__btn--prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false
-  },
-  breakpoints: {
-    700: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    }
-  }
-});
-
 new Swiper('.reviews__swiper', {
-  navigation: {
-    nextEl: '.reviews__btn--next',
-    prevEl: '.reviews__btn--prev',
-  },
-  breakpoints: {
-    700: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    }
+  speed: 800,
+  spaceBetween: 14,
+  slidesPerView: 'auto',
+  scrollbar: {
+    el: '.reviews__swiper-scrollbar',
+    draggable: true
   }
-});
+})

@@ -1,0 +1,26 @@
+.stats {
+  @include bg;
+  padding: 75px 0;
+  background-image: url("../images/stats.svg");
+
+  &__list {
+    display: grid;
+    color: $white;
+    text-align: center;
+    grid-gap: 70px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__num {
+    font-weight: 600;
+    font-size: 60px;
+    margin-bottom: 24px;
+    display: block;
+    line-height: 85%;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}

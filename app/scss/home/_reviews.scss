@@ -1,0 +1,112 @@
+.reviews {
+  &__swiper {
+    margin-bottom: 56px;
+    @include r($lg) {
+      margin-bottom: 46px;
+    }
+    @include r($phone) {
+      margin-bottom: 36px;
+    }
+
+    &-scrollbar {
+      display: none;
+      @media (max-width: 860px) {
+        display: flex;
+        height: 7px;
+        overflow: hidden;
+        border-radius: 30px;
+        background-color: rgba(#691923, .8);
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__card {
+    padding: 20px 18px;
+    border-radius: 12px;
+    background-color: $white;
+    box-shadow: 0 16px 40px 0 rgba(232, 228, 239, 0.48);
+  }
+
+  &__head {
+    @include flex-align-center(5);
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    color: rgba($black, .8);
+  }
+
+  &__quotes {
+    margin-bottom: 8px;
+
+    &.reverse {
+      margin-left: auto;
+      margin-bottom: 18px;
+      transform: rotate(180deg) scaleX(-1);
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    @include r($tablet) {
+      font-size: 19px;
+    }
+    @include r($phone) {
+      font-size: 18px;
+    }
+  }
+
+  &__info {
+    @include flex-align-center(13);
+    @include r($phone) {
+      font-size: 17px;
+    }
+
+    img {
+      @include objectCoverBg;
+      border-radius: 50%;
+    }
+  }
+
+  &__author {
+    line-height: 1;
+    @include flex-column(6);
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__job {
+    color: rgba($black, .8);
+  }
+
+  &__btn {
+    @media (max-width: 390px) {
+      font-size: 13px;
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+    cursor: grab;
+  }
+
+  .swiper-slide {
+    max-width: 300px;
+    width: 100%;
+    @include r($lg) {
+      max-width: 245px;
+    }
+  }
+
+  .swiper-scrollbar-drag {
+    @media (max-width: 860px) {
+      background-color: #f82b45;
+    }
+  }
+}
