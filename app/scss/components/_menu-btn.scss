@@ -10,11 +10,11 @@
   border-radius: 50%;
   padding: 18px 13px;
   transition: all .4s;
-  background-color: $accent;
+  background-color: $white;
   border: 1px solid transparent;
 
   &:hover {
-    background-color: #4c835d;
+    background-color: $black;
 
     .menu-btn__line, .menu-btn__line::after, .menu-btn__line::before {
       background-color: $white;
@@ -31,7 +31,7 @@
   }
 
   &--header {
-    @media (max-width: 768px) {
+    @media (max-width: 840px) {
       display: flex;
       margin-left: auto;
     }
@@ -40,7 +40,7 @@
   &__line,
   &__line::after,
   &__line::before {
-    background-color: $white;
+    background-color: $black;
     content: '';
     left: 0;
     top: 0;
@@ -69,7 +69,7 @@
 
   &.active {
     background-color: transparent;
-    border-color: $accent;
+    border-color: $white;
 
     .menu-btn__line {
       background: transparent;
@@ -80,14 +80,14 @@
         margin-top: 0;
         transform: rotate(-45deg);
         transition-delay: .4s;
-        background-color: $black100;
+        background-color: $white;
       }
 
       &::after {
         margin-top: 0;
         transform: rotate(45deg);
         transition-delay: .4s;
-        background-color: $black100;
+        background-color: $white;
       }
     }
   }
