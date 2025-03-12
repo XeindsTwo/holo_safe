@@ -1,0 +1,134 @@
+.filling {
+  @include bg;
+  padding: 70px 0;
+  color: $white;
+  background-color: #100F0F;
+  background-image: url("../images/filling-bg.svg");
+
+  &__inner {
+    @include flex-between-center-gap(30);
+    align-items: stretch;
+  }
+
+  &__info {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    line-height: 1.05;
+  }
+
+  &__text {
+    max-width: 465px;
+    font-size: 20px;
+    color: rgba($white, .7);
+    margin-bottom: 40px;
+  }
+
+  &__subtext {
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    color: rgba($white, .8);
+  }
+
+  &__link {
+    @include flex-align-center(9);
+    font-size: 24px;
+    line-height: 1;
+    padding: 2px 1px;
+    margin-left: -2px;
+    max-width: max-content;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: $accent;
+
+      svg path {
+        fill: $accent;
+      }
+    }
+
+    &:focus {
+      border-color: $accent;
+      color: $white;
+
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__form {
+    max-width: 630px;
+    width: 100%;
+  }
+
+  &__items {
+    @include flex-column(20);
+    margin-bottom: 25px;
+  }
+
+  &__row {
+    &.grid {
+      display: grid;
+      grid-gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__selectors {
+    @include flex-align-center(10);
+    margin-top: 4px;
+    border-bottom: 1px solid #393939;
+
+    span {
+      color: rgba($white, .3);
+    }
+  }
+
+  &__select {
+    color: rgba($white, .4);
+    padding: 10px 0;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:focus {
+      color: $accent;
+    }
+
+    &.active {
+      color: #1988ff;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  &__btn {
+    max-width: 170px;
+    width: 100%;
+    border-width: 1px;
+    font-size: 16px;
+    padding: 14px 20px;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $white;
+      color: $white;
+    }
+
+    &:focus {
+      background-color: $accent;
+      border-color: transparent;
+      color: $white;
+    }
+  }
+}
