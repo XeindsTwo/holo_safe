@@ -19,6 +19,9 @@
     min-height: 170px;
     max-height: 200px;
     resize: vertical;
+    @media (max-width: 960px) {
+      min-height: 130px;
+    }
   }
 }
 

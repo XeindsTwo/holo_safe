@@ -4,10 +4,20 @@
   color: $white;
   background-color: #100F0F;
   background-image: url("../images/filling-bg.svg");
+  @include r($lg) {
+    padding: 55px 0;
+  }
 
   &__inner {
-    @include flex-between-center-gap(30);
+    @include flex-between-center-gap(50);
     align-items: stretch;
+    @media (max-width: 960px) {
+      gap: 80px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__info {
@@ -26,13 +36,40 @@
     font-size: 20px;
     color: rgba($white, .7);
     margin-bottom: 40px;
+    @media (max-width: 1100px) {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+    @include r($phone) {
+      font-size: 17px;
+    }
+  }
+
+  &__bottom {
+    margin-top: auto;
+    @media (max-width: 960px) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      @media (max-width: 960px) {
+        margin-top: -25px;
+        display: block;
+      }
+    }
   }
 
   &__subtext {
     font-size: 20px;
-    margin-top: auto;
     margin-bottom: 10px;
     color: rgba($white, .8);
+    @media (max-width: 1100px) {
+      font-size: 18px;
+    }
+    @include r($tablet) {
+      font-size: 16px;
+    }
   }
 
   &__link {
@@ -45,6 +82,17 @@
     border-radius: 4px;
     border: 1px solid transparent;
     transition: color .4s, border .4s;
+    @media (max-width: 1100px) {
+      font-size: 22px;
+    }
+    @media (max-width: 960px) {
+      font-size: 20px;
+      margin: 0 auto;
+    }
+    @include r($tablet) {
+      font-size: 18px;
+      gap: 7px;
+    }
 
     &:hover {
       color: $accent;
@@ -62,16 +110,36 @@
         fill: $white;
       }
     }
+
+    svg {
+      @media (max-width: 1100px) {
+        width: 25px;
+        height: 25px;
+      }
+      @include r($tablet) {
+        width: 22px;
+        height: 22px;
+      }
+    }
   }
 
   &__form {
     max-width: 630px;
     width: 100%;
+    @include r($desktop) {
+      max-width: 560px;
+    }
+    @media (max-width: 960px) {
+      text-align: left;
+    }
   }
 
   &__items {
     @include flex-column(20);
     margin-bottom: 25px;
+    @media (max-width: 530px) {
+      gap: 46px;
+    }
   }
 
   &__row {
@@ -79,6 +147,10 @@
       display: grid;
       grid-gap: 16px;
       grid-template-columns: repeat(2, 1fr);
+      @media (max-width: 530px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 26px;
+      }
     }
   }
 
@@ -101,12 +173,8 @@
       color: $white;
     }
 
-    &:focus {
-      color: $accent;
-    }
-
     &.active {
-      color: #1988ff;
+      color: $accent;
       user-select: none;
       pointer-events: none;
     }
@@ -118,6 +186,9 @@
     border-width: 1px;
     font-size: 16px;
     padding: 14px 20px;
+    @media (max-width: 960px) {
+      max-width: 100%;
+    }
 
     &:hover {
       background-color: transparent;
